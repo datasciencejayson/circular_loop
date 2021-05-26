@@ -1204,4 +1204,18 @@ with PdfPages(f'{outpath}/{max_date}_accuracy_trend_for_daily.pdf') as pdf_pages
        # plt.savefig(f'/data2/bsro/00028_ld_mvp1/output/accuracy_reports/{max_date}_{daily_list_df_title[i]}.pdf')
         i+=1
 
+        
+ def day_of_week_order(x):
+    if (x['weekday'] == 'Saturday'):
+        return 1
+    if (x['weekday'] == 'Monday'):
+        return 2
+    if (x['weekday'] == 'Tuesday'):
+        return 3
+    if (x['weekday'] == 'Wednesday'):
+        return 4
+    if (x['weekday'] == 'Thursday'):
+        return 5
+    if (x['weekday'] == 'Friday'):
+        return 6
 
